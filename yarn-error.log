@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add promise-polyfill
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add wepy-async-function
 
 PATH: 
   /home/teddy/bin:/home/teddy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EPERM: operation not permitted, chmod '/var/www/html/myWeBBS/node_modules/acorn-jsx/node_modules/.bin/acorn'
+  Error: EACCES: permission denied, unlink '/var/www/html/myWeBBS/node_modules/.bin/acorn'
 
 npm manifest: 
   {
@@ -37,6 +37,7 @@ npm manifest:
     "license": "MIT",
     "dependencies": {
       "lodash": "^4.17.5",
+      "promise-polyfill": "^7.1.2",
       "redux": "^3.7.2",
       "redux-actions": "^2.2.1",
       "redux-promise": "^0.5.3",
@@ -1648,6 +1649,10 @@ Lockfile:
   promise-polyfill@^6.0.2:
     version "6.1.0"
     resolved "http://registry.npm.taobao.org/promise-polyfill/download/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
+  
+  promise-polyfill@^7.1.2:
+    version "7.1.2"
+    resolved "http://registry.npm.taobao.org/promise-polyfill/download/promise-polyfill-7.1.2.tgz#ab05301d8c28536301622d69227632269a70ca3b"
   
   promise@^7.1.1:
     version "7.3.1"
