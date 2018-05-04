@@ -23,29 +23,29 @@
   import wepy from 'wepy'
 
   export default class Index extends wepy.page {
-    //可用于页面模板绑定的数据
+    // 可用于页面模板绑定的数据
     data = {
       topics: [{
         id: 1,
         title: '测试1',
         body: 'larabbs 测试内容1'
-      },{
+      }, {
         id: 2,
         title: '测试2',
         body: 'larabbs 测试内容2'
-      },{
+      }, {
         id: 3,
         title: '测试3',
         body: 'larabbs 测试内容3'
-      },{
+      }, {
         id: 4,
         title: '测试4',
         body: 'larabbs 测试内容4'
-      },{
+      }, {
         id: 5,
         title: '测试5',
         body: 'larabbs 测试内容5'
-      },]
+      }]
     }
   }
 </script>

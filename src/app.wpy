@@ -33,6 +33,13 @@ page{
 
 <script>
 import wepy from 'wepy'
+import 'wepy-async-function'
+
+import { setStore } from 'wepy-redux'
+import configStore from './store'
+
+const store = configStore()
+setStore(store)
 
 export default class extends wepy.app {
   config = {
@@ -66,10 +73,13 @@ export default class extends wepy.app {
   constructor () {
     super()
     this.use('requestfix')
+    this.use('promisify')
   }
 
   onLaunch() {
-    //this.testAsync()
+    wepy.login().then(res => {
+      console.log('login: ', res)
+    })
   }
 }
 </script>
