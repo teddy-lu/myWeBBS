@@ -5,6 +5,12 @@ const host = 'http://larabbs.app.com/api'
 
 //普通请求
 const request = async (options, showLoading = true) => {
+	//简化开发，如果传入字符串则转换成 对象
+	if (typeof options === 'string') {
+		options = {
+			url: options
+		}
+	}
 	//显示加载中
 	if (showLoading) {
 		wepy.showLoading({title: '加载中'})
@@ -113,7 +119,7 @@ const authRequest = async (options, showLoading = true) => {
 
 	// 将 Token 设置在 header 中
 	let header = options.header || {}
-	header.Authorization = 'Bearer '+accessToken
+	header.Authorization = 'Bearer ' + accessToken
 	options.header = header
 
 	return request(options, showLoading)
