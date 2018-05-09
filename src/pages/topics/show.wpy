@@ -59,7 +59,7 @@ page{
     }
     data = {
       //话题数据
-      topic : null
+      topic : null,
       //当前登录用户
       user: null
     }
@@ -67,6 +67,8 @@ page{
     computed = {
       //是否可以删除话题
       canDelete() {
+        //console.log(this.topic)
+        //console.log(this.user)
         if (!this.topic || !this.user) {
           return false
         }
@@ -121,7 +123,7 @@ page{
 
         //调用接口删除话题
         let deleteResponse = await api.authRequest({
-          url: 'topics/' + this.topic.id
+          url: 'topics/' + this.topic.id,
           method: 'DELETE'
         })
 
